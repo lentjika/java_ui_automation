@@ -33,7 +33,7 @@ public class App {
         }
 
         enterButton.click();
-        var login = driver.findElement(By.id("loginform-username"));
+        WebElement login = driver.findElement(By.id("loginform-username"));
         login.sendKeys("gb_gunina_test");
         driver.findElement(By.id("loginform-password")).sendKeys("Qw123456");
         driver.switchTo().frame(0);

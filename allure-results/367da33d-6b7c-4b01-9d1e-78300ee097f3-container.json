@@ -1,0 +1,1 @@
+{"uuid":"367da33d-6b7c-4b01-9d1e-78300ee097f3","name":"Удаление записи","children":["3d24de4d-2af3-4007-8c07-7d0bc5fe2020"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1642966215071,"stop":1642966215071}],"start":1642966210766,"stop":1642966215071}

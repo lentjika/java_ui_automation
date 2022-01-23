@@ -1,0 +1,1 @@
+{"uuid":"fb0c1f95-db81-4bb0-a2de-ccb02c5a6a2a","name":"Процедура входа в дневник","children":["6305e7ff-51ee-4aa6-8bad-6f6864f007e9"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1642965876101,"stop":1642965876111}],"start":1642965853718,"stop":1642965876230}

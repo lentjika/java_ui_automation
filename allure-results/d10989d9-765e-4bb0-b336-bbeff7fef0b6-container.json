@@ -1,0 +1,1 @@
+{"uuid":"d10989d9-765e-4bb0-b336-bbeff7fef0b6","name":"Создание новой записи","children":["6039980e-82d7-4668-a4c5-2ba3e1266ea9"],"befores":[],"afters":[{"name":"tearDown","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1642966011193,"stop":1642966011193}],"start":1642965999646,"stop":1642966011209}

@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 public class LoginPage {
     private WebDriver driver;
 
@@ -33,27 +31,23 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    public LoginPage enterLogin(String login){
+    public LoginPage enterLogin(String login) {
         loginBox.sendKeys(login);
         return this;
     }
 
-    public LoginPage enterPassword(String pwd){
+    public LoginPage enterPassword(String pwd) {
         passwordBox.sendKeys(pwd);
         return this;
     }
 
-    public LoginPage enterCaptcha(int millis){
+    public LoginPage enterCaptcha(int millis) throws InterruptedException {
         for (WebElement frame : frames) {
-            var frameTitle = frame.getAttribute("title");
+            String frameTitle = frame.getAttribute("title");
             if (frameTitle.equals("reCAPTCHA")) {
                 driver.switchTo().frame(frame);
                 captchaButton.click();
-                try {
-                    Thread.sleep(millis); //для прохода капчи
-                } catch (InterruptedException e) {
-                    fail(e.getMessage());
-                }
+                Thread.sleep(millis); //для прохода капчи
                 driver.switchTo().parentFrame();
                 break;
             }
@@ -61,7 +55,7 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage clickLoginBtn(){
+    public LoginPage clickLoginBtn() {
         loginButton.click();
         return this;
     }

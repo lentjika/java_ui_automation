@@ -8,8 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
-
 public class PostList {
     private WebDriver driver;
 
@@ -21,8 +19,8 @@ public class PostList {
         PageFactory.initElements(driver, this);
     }
 
-    private String getFirstId(){
-        var elem = postList.get(0);
+    private String getFirstId() {
+        WebElement elem = postList.get(0);
         String postId = elem.getAttribute("id");
         String id = postId.substring(4);
         return id;
@@ -30,22 +28,17 @@ public class PostList {
 
     public PostList deleteFirst() {
         String id = getFirstId();
-        var rmvBtn = driver.findElement(By.cssSelector("#post" + id + " .i-cross"));
+        WebElement rmvBtn = driver.findElement(By.cssSelector("#post" + id + " .i-cross"));
         rmvBtn.click();
-        var confirmBtn = driver.findElement(By.cssSelector("#modal_confirm_delete_post_" + id + " .btn-primary"));
+        WebElement confirmBtn = driver.findElement(By.cssSelector("#modal_confirm_delete_post_" + id + " .btn-primary"));
         confirmBtn.click();
         return this;
     }
 
-    public PostList editFirst(){
+    public PostList editFirst() {
         String id = getFirstId();
-        var editBtn = driver.findElement(By.cssSelector("#post" + id + " .i-edit"));
+        WebElement editBtn = driver.findElement(By.cssSelector("#post" + id + " .i-edit"));
         editBtn.click();
-        return this;
-    }
-
-    public PostList findPost(String text){
-        driver.findElement(By.xpath("//*[contains(text(),'" + text + "')]"));
         return this;
     }
 }
